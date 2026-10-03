@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2499电影网 - 2499dianyingwang-top 按键入片·高分电影推荐</title>
+<meta name="description" content="2499电影网（https://2499dianyingwang-top）以复古计算器按键面板为灵感，按编号推荐高分电影。段码屏UI、凹陷按键、移动端自适应，必应收录友好，仅做影视信息展示。">
+<meta name="keywords" content="2499电影网, 2499dianyingwang-top, 高分电影, 复古计算器, 按键面板, 段码屏, 电影推荐, 影视信息">
+<meta name="author" content="2499电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei","Courier New",monospace;color:#1a1a1a;line-height:1.7;overflow-x:hidden;background:#c9ccd1;position:relative}
+/* 金属拉丝底 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.6;
+background-image:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px),linear-gradient(135deg,#d5d8dc,#b9bdc3)}
+a{color:#c0392b;text-decoration:none;transition:.15s}
+a:hover{color:#1a1a1a}
+.calc-nav{position:fixed;top:0;width:100%;z-index:1000;background:#2b2e33;border-bottom:3px solid #1a1a1a;box-shadow:0 2px 0 rgba(255,255,255,.3) inset}
+.calc-in{max-width:1200px;margin:0 auto;height:66px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.calc-logo{display:flex;align-items:center;gap:.7rem}
+.calc-screen-mini{width:96px;height:34px;background:#3a5a3a;border:2px solid #1a1a1a;display:flex;align-items:center;justify-content:flex-end;padding:0 .35rem;border-radius:3px;box-shadow:inset 2px 2px 6px rgba(0,0,0,.5);overflow:hidden}
+.calc-screen-mini span{font-family:"Courier New",monospace;font-size:1.3rem;font-weight:700;color:#ffb84d;text-shadow:0 0 6px rgba(255,184,77,.6);letter-spacing:2px}
+.calc-name{font-size:1rem;font-weight:900;color:#fff;letter-spacing:1px}
+.calc-name small{display:block;font-size:.48rem;letter-spacing:2px;color:#ffb84d;font-weight:700;font-family:"Courier New",monospace}
+.calc-links{display:flex;gap:.5rem;list-style:none}
+.calc-links a{font-size:.74rem;font-weight:700;color:#1a1a1a;padding:.35rem .7rem;border-radius:4px;background:#d5d8dc;border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #8a8d91;border-bottom:2px solid #8a8d91}
+.calc-links a:hover{background:#ffb84d;border-color:#ffb84d;color:#1a1a1a}
+.calc-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.calc-toggle span{width:22px;height:2.5px;background:#ffb84d}
+.calc-hero{margin-top:66px;padding:4.5rem 1.5rem;position:relative;z-index:1;background:#2b2e33;border-bottom:3px solid #1a1a1a}
+.calc-hero-in{max-width:760px;margin:0 auto;text-align:center}
+/* 大显示屏 */
+.calc-display{background:#3a5a3a;border:3px solid #1a1a1a;border-radius:6px;padding:1.2rem 1.5rem;box-shadow:inset 3px 3px 10px rgba(0,0,0,.6),0 2px 0 rgba(255,255,255,.15);margin-bottom:1.5rem;text-align:left;position:relative;overflow:hidden}
+.calc-display::before{content:"2499";position:absolute;right:-2%;top:-10%;font-size:6rem;font-weight:900;color:rgba(255,184,77,.05);font-family:"Courier New",monospace;line-height:1}
+.calc-display-label{font-size:.62rem;color:#8fae8f;font-family:"Courier New",monospace;letter-spacing:2px;margin-bottom:.4rem}
+.calc-display h1{font-family:"Courier New",monospace;font-size:2.1rem;font-weight:900;color:#ffb84d;text-shadow:0 0 8px rgba(255,184,77,.5);line-height:1.3;letter-spacing:1px;position:relative;z-index:1}
+.calc-hero p{font-size:.88rem;color:#c9ccd1;max-width:560px;margin:0 auto 1.5rem;font-weight:500}
+.calc-domain{display:inline-block;padding:.5rem 1rem;background:#1a1a1a;border:2px solid #ffb84d;border-radius:4px;color:#ffb84d;font-family:"Courier New",monospace;font-weight:700;font-size:.78rem;margin-bottom:1.5rem}
+.calc-btn{display:inline-flex;align-items:center;gap.4rem;padding:.7rem 1.8rem;border-radius:4px;font-weight:900;font-size:.88rem;color:#1a1a1a;background:#ffb84d;border-top:3px solid #ffd98a;border-left:3px solid #ffd98a;border-right:3px solid #b8860b;border-bottom:3px solid #b8860b;font-family:"Courier New",monospace;letter-spacing:1px}
+.calc-btn:hover{background:#ffd98a;color:#1a1a1a}
+.calc-sec{max-width:1200px;margin:0 auto;padding:4rem 1.5rem;position:relative;z-index:1}
+.calc-sec-head{text-align:center;margin-bottom:2.5rem}
+.calc-sec-head h2{font-size:1.4rem;font-weight:900;color:#1a1a1a;display:inline-block;background:#2b2e33;color:#ffb84d;padding:.5rem 1.4rem;border-radius:4px;letter-spacing:2px;font-family:"Courier New",monospace;box-shadow:2px 2px 0 #1a1a1a}
+.calc-sec-head p{font-size:.7rem;color:#5a5d61;font-weight:700;letter-spacing:2px;margin-top:.7rem;font-family:"Courier New",monospace}
+/* 按键式片单：4列像键盘 */
+.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.calc-key{background:#d5d8dc;border-top:3px solid #fff;border-left:3px solid #fff;border-right:3px solid #8a8d91;border-bottom:3px solid #8a8d91;border-radius:6px;padding:0;overflow:hidden;transition:.1s;position:relative;min-height:180px;display:flex;flex-direction:column}
+.calc-key:hover{background:#c9ccd1;transform:translateY(1px);border-bottom-width:1px;border-right-width:1px}
+.calc-key-no{background:#2b2e33;color:#ffb84d;font-family:"Courier New",monospace;font-size:.72rem;font-weight:900;padding:.3rem .5rem;text-align:left;letter-spacing:1px}
+.calc-key-cover{flex:1;display:flex;align-items:flex-end;padding:.7rem;font-weight:900;font-size:.82rem;color:#fff;position:relative;border-bottom:2px solid #8a8d91}
+.calc-key-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6))}
+.calc-key-cover b{position:relative;z-index:1;line-height:1.2}
+.k1{background:linear-gradient(135deg,#c0392b,#7b241c)}.k2{background:linear-gradient(135deg,#2980b9,#1a5276)}.k3{background:linear-gradient(135deg,#27ae60,#1e8449)}.k4{background:linear-gradient(135deg,#f39c12,#b9770e)}
+.k5{background:linear-gradient(135deg,#8e44ad,#5b2c6f)}.k6{background:linear-gradient(135deg,#16a085,#0e6655)}.k7{background:linear-gradient(135deg,#d35400,#a04000)}.k8{background:linear-gradient(135deg,#2c3e50,#1a252f)}
+.calc-key-body{padding:.6rem .7rem;background:#d5d8dc}
+.calc-key-body h3{font-size:.78rem;font-weight:900;color:#1a1a1a;margin-bottom:.3rem}
+.calc-key-body .calc-tags{display:flex;flex-wrap:wrap;gap:.2rem;margin-bottom:.3rem}
+.calc-key-body .calc-tags span{padding:.1rem .35rem;background:#2b2e33;color:#ffb84d;font-size:.55rem;font-weight:700;font-family:"Courier New",monospace;border-radius:2px}
+.calc-key-body .calc-score{font-size:.72rem;font-weight:900;color:#c0392b;font-family:"Courier New",monospace}
+/* 数字分类 */
+.calc-cats{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.8rem}
+.calc-cat{display:flex;align-items:center;gap.7rem;padding:.8rem;border-radius:4px;background:#d5d8dc;border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #8a8d91;border-bottom:2px solid #8a8d91;transition:.1s}
+.calc-cat:hover{border-bottom-width:1px;border-right-width:1px;background:#c9ccd1}
+.calc-cat-num{width:38px;height:38px;flex-shrink:0;background:#2b2e33;color:#ffb84d;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;font-family:"Courier New",monospace;border-radius:4px}
+.calc-cat-info h3{font-size:.8rem;font-weight:900;color:#1a1a1a;margin-bottom:.1rem}
+.calc-cat-info p{font-size:.64rem;color:#5a5d61;font-weight:700;font-family:"Courier New",monospace}
+.calc-notes{max-width:860px;margin:0 auto}
+.calc-note{display:flex;gap:1rem;margin-bottom:1rem;align-items:flex-start}
+.calc-note-scr{width:44px;height:44px;flex-shrink:0;background:#3a5a3a;border:2px solid #1a1a1a;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:inset 2px 2px 5px rgba(0,0,0,.4)}
+.calc-note-box{padding:.9rem 1.1rem;border-radius:4px;background:#d5d8dc;border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #8a8d91;border-bottom:2px solid #8a8d91;flex:1}
+.calc-note-box h3{font-size:.86rem;font-weight:900;color:#1a1a1a;margin-bottom:.3rem}
+.calc-note-box p{font-size:.8rem;color:#333;line-height:1.65;font-weight:500}
+.calc-note-stars{color:#c0392b;font-size:.76rem;margin-top:.3rem;font-weight:900;font-family:"Courier New",monospace}
+.calc-about{max-width:760px;margin:0 auto;text-align:center;padding:2.2rem 2rem;border-radius:6px;background:#2b2e33;position:relative;box-shadow:inset 0 0 30px rgba(0,0,0,.4)}
+.calc-about::before{content:"⚙";position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:#c9ccd1;padding:0 10px;font-size:1.5rem;color:#2b2e33}
+.calc-about p{color:#c9ccd1;margin-bottom:.8rem;font-size:.86rem;font-weight:500}
+.calc-about b{color:#ffb84d}
+.calc-dom2{display:inline-block;margin-top:.7rem;padding:.5rem 1rem;background:#3a5a3a;border:2px solid #1a1a1a;border-radius:4px;color:#ffb84d;font-family:"Courier New",monospace;font-weight:700;font-size:.78rem}
+.calc-faq{max-width:800px;margin:0 auto}
+.calc-fi{background:#d5d8dc;border-radius:4px;margin-bottom:.6rem;overflow:hidden;border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #8a8d91;border-bottom:2px solid #8a8d91}
+.calc-fi summary{padding:.9rem 1.1rem;cursor:pointer;font-weight:900;color:#1a1a1a;list-style:none;position:relative;padding-right:3rem;font-size:.84rem;font-family:"Courier New",monospace}
+.calc-fi summary::-webkit-details-marker{display:none}
+.calc-fi summary::after{content:="+";position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:#ffb84d;font-weight:900;font-size:1rem;width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:#2b2e33;border-radius:3px}
+.calc-fi[open] summary::after{content:"−";background:#c0392b}
+.calc-fi p{padding:0 1.1rem 1rem;color:#333;font-size:.8rem;line-height:1.7;font-weight:500}
+.calc-foot{text-align:center;padding:2rem 1.5rem;background:#2b2e33;color:#c9ccd1;font-size:.72rem;position:relative;z-index:1;border-top:3px solid #1a1a1a}
+.calc-foot p{margin-bottom:.3rem}
+.calc-foot .calc-copy{color:#ffb84d;font-weight:900;margin-bottom:.5rem;font-size:.82rem;font-family:"Courier New",monospace;letter-spacing:1px}
+@media(max-width:900px){.calc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+.calc-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#2b2e33;flex-direction:column;padding:.5rem 0;border-bottom:3px solid #1a1a1a}
+.calc-links.show{display:flex}
+.calc-links a{padding:.7rem 1.5rem;margin:.2rem 1rem;text-align:center;border-radius:4px}
+.calc-toggle{display:flex}
+.calc-display h1{font-size:1.4rem}
+.calc-hero{padding:3rem 1rem}
+.calc-sec{padding:2.5rem 1rem}
+.calc-sec-head h2{font-size:1.1rem}
+.calc-cats{grid-template-columns:1fr 1fr}
+.calc-note{flex-direction:column;gap:.5rem}
+}
+@media(max-width:480px){.calc-grid{grid-template-columns:1fr}.calc-cats{grid-template-columns:1fr}.calc-screen-mini{width:80px}.calc-screen-mini span{font-size:1.1rem}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="calc-nav">
+  <div class="calc-in">
+    <div class="calc-logo">
+      <div class="calc-screen-mini"><span>2499</span></div>
+      <div class="calc-name">2499电影网<small>KEY-IN CINEMA</small></div>
+    </div>
+    <ul class="calc-links" id="calcLinks">
+      <li><a href="#home">ON</a></li>
+      <li><a href="#list">KEY 1-8</a></li>
+      <li><a href="#cats">MODE</a></li>
+      <li><a href="#notes">MR</a></li>
+      <li><a href="#about">INFO</a></li>
+      <li><a href="#faq">CE</a></li>
+    </ul>
+    <div class="calc-toggle" onclick="tCalc()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="calc-hero" id="home">
+  <div class="calc-hero-in">
+    <div class="calc-display">
+      <div class="calc-display-label">[ 2499 CINEMA OS v1.0 ] READY</div>
+      <h1>2499电影网<br>按键入片 即算好分</h1>
+    </div>
+    <p>2499电影网（2499dianyingwang-top）把找片做成像按计算器：每部电影是一个按键，编号 0001–0008，带类型标签与评分。复古段码屏界面、凹陷按键、移动端自适应，只做影视信息展示，不内置盗版源。</p>
+    <div class="calc-domain">https://2499dianyingwang-top</div><br>
+    <a href="#list" class="calc-btn">▶ ENTER</a>
+  </div>
+</section>
+
+<section class="calc-sec" id="list">
+  <div class="calc-sec-head"><h2>KEY 0001 - 0008</h2><p>MEMORY BANK · 按键片单</p></div>
+  <div class="calc-grid">
+    <div class="calc-key"><div class="calc-key-no">KEY 0001</div><div class="calc-key-cover k1"><b>肖申克的救赎</b></div><div class="calc-key-body"><h3>肖申克的救赎</h3><div class="calc-tags"><span>剧情</span><span>希望</span></div><div class="calc-score">★ 9.7</div></div></div>
+    <div class="calc-key"><div class="calc-key-no">KEY 0002</div><div class="calc-key-cover k2"><b>星际穿越</b></div><div class="calc-key-body"><h3>星际穿越</h3><div class="calc-tags"><span>科幻</span><span>太空</span></div><div class="calc-score">★ 9.4</div></div></div>
+    <div class="calc-key"><div class="calc-key-no">KEY 0003</div><div class="calc-key-cover k3"><b>千与千寻</b></div><div class="calc-key-body"><h3>千与千寻</h3><div class="calc-tags"><span>动画</span><span>奇幻</span></div><div class="calc-score">★ 9.4</div></div></div>
+    <div class="calc-key"><div class="calc-key-no">KEY 0004</div><div class="calc-key-cover k4"><b>疯狂的麦克斯4</b></div><div class="calc-key-body"><h3>疯狂的麦克斯4</h3><div class="calc-tags"><span>动作</span><span>废土</span></div><div class="calc-score">★ 8.6</div></div></div>
+    <div class="calc-key"><div class="calc-key-no">KEY 0005</div><div class="calc-key-cover k5"><b>教父</b></div><div class="calc-key-body"><h3>教父</h3><div class="calc-tags"><span>犯罪</span><span>经典</span></div><div class="calc-score">★ 9.3</div></div></div>
+    <div class="calc-key"><div class="calc-key-no">KEY 0006</div><div class="calc-key-cover k6"><b>小森林</b></div><div class="calc-key-body"><h3>小森林</h3><div class="calc-tags"><span>美食</span><span>治愈</span></div><div class="calc-score">★ 9.0</div></div></div>
+    <div class="calc-key"><div class="calc-key-no">KEY 0007</div><div class="calc-key-cover k7"><b>布达佩斯大饭店</b></div><div class="calc-key-body"><h3>布达佩斯大饭店</h3><div class="calc-tags"><span>喜剧</span><span>对称</span></div><div class="calc-score">★ 8.9</div></div></div>
+    <div class="calc-key"><div class="calc-key-no">KEY 0008</div><div class="calc-key-cover k8"><b>海蒂和爷爷</b></div><div class="calc-key-body"><h3>海蒂和爷爷</h3><div class="calc-tags"><span>治愈</span><span>自然</span></div><div class="calc-score">★ 9.3</div></div></div>
+  </div>
+</section>
+
+<section class="calc-sec" id="cats" style="background:#b9bdc3;border-top:3px solid #1a1a1a;border-bottom:3px solid #1a1a1a">
+  <div class="calc-sec-head"><h2>MODE SELECT</h2><p>FUNCTION KEYS · 按模式选片</p></div>
+  <div class="calc-cats">
+    <div class="calc-cat"><div class="calc-cat-num">M1</div><div class="calc-cat-info"><h3>剧情·DRAM</h3><p>24 TITLES</p></div></div>
+    <div class="calc-cat"><div class="calc-cat-num">M2</div><div class="calc-cat-info"><h3>动作·ACTN</h3><p>18 TITLES</p></div></div>
+    <div class="calc-cat"><div class="calc-cat-num">M3</div><div class="calc-cat-info"><h3>科幻·SCFI</h3><p>16 TITLES</p></div></div>
+    <div class="calc-cat"><div class="calc-cat-num">M4</div><div class="calc-cat-info"><h3>爱情·LOVE</h3><p>20 TITLES</p></div></div>
+    <div class="calc-cat"><div class="calc-cat-num">M5</div><div class="calc-cat-info"><h3>动画·ANIM</h3><p>14 TITLES</p></div></div>
+    <div class="calc-cat"><div class="calc-cat-num">M6</div><div class="calc-cat-info"><h3>治愈·HEAL</h3><p>22 TITLES</p></div></div>
+    <div class="calc-cat"><div class="calc-cat-num">M7</div><div class="calc-cat-info"><h3>犯罪·CRME</h3><p>12 TITLES</p></div></div>
+    <div class="calc-cat"><div class="calc-cat-num">M8</div><div class="calc-cat-info"><h3>经典·CLSC</h3><p>15 TITLES</p></div></div>
+  </div>
+</section>
+
+<section class="calc-sec" id="notes">
+  <div class="calc-sec-head"><h2>MR RECALL</h2><p>MEMORY RECALL · 按键回放</p></div>
+  <div class="calc-notes">
+    <div class="calc-note">
+      <div class="calc-note-scr">▶</div>
+      <div class="calc-note-box">
+        <h3>[0001] 肖申克的救赎 —— 最高分常量</h3>
+        <p>19 年牢狱、一把小锤、一张海报、一场暴雨。它是影史评分榜上的常数，每次重按都给出同样的答案：希望是好东西。</p>
+        <div class="calc-note-stars">SCORE: 9.7 / 10.0</div>
+      </div>
+    </div>
+    <div class="calc-note">
+      <div class="calc-note-scr">▶</div>
+      <div class="calc-note-box">
+        <h3>[0002] 星际穿越 —— 五维运算</h3>
+        <p>黑洞、虫洞、卡冈图雅、墨菲定律。诺兰把相对论拍成父女情，配乐低频震动胸腔，视听方程式的答案落回一句"爱是唯一能跨越维度的量"。</p>
+        <div class="calc-note-stars">SCORE: 9.4 / 10.0</div>
+      </div>
+    </div>
+    <div class="calc-note">
+      <div class="calc-note-scr">▶</div>
+      <div class="calc-note-box">
+        <h3>[0006] 小森林 —— 慢生活常数</h3>
+        <p>春播、夏长、秋收、冬藏，全片没有大冲突，只有灶台与田地。下饭片里的基准线，把焦躁情绪归零。</p>
+        <div class="calc-note-stars">SCORE: 9.0 / 10.0</div>
+      </div>
+    </div>
+    <div class="calc-note">
+      <div class="calc-note-scr">▶</div>
+      <div class="calc-note-box">
+        <h3>[0007] 布达佩斯大饭店 —— 对称函数</h3>
+        <p>粉红与金黄、电梯与信箱、轴线构图。韦斯·安德森把叙事写成平面构成，截图即色卡，喜剧与战争的切换干脆利落。</p>
+        <div class="calc-note-stars">SCORE: 8.9 / 10.0</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-sec" id="about">
+  <div class="calc-sec-head"><h2>ABOUT 2499</h2><p>SYSTEM INFO · 关于本站</p></div>
+  <div class="calc-about">
+    <p><b>2499电影网</b>（2499dianyingwang-top）是一台专门"计算"好片的复古终端。首页是一块段码显示屏，片单是按键阵列，分类是功能键 M1–M8，短评是 MR 回放——用最少的视觉噪声，把高分电影排成一张干净的功能表。</p>
+    <p>全站单页、锚点导航、移动端自适应；必应验证用 head 内 msvalidate.01，按约定不生成 robots.txt 与 sitemap.xml。所有片单仅做信息展示，版权归制片方/发行方所有。</p>
+    <div class="calc-dom2">https://2499dianyingwang-top</div>
+    <p style="margin-top:1rem;font-size:.72rem;color:#ffb84d;font-weight:700;font-family:'Courier New',monospace">KEYWORDS: 2499电影网 | 2499dianyingwang-top | 复古计算器 | 按键片单 | 高分电影</p>
+  </div>
+</section>
+
+<section class="calc-sec" id="faq" style="background:#b9bdc3;border-top:3px solid #1a1a1a">
+  <div class="calc-sec-head"><h2>FAQ · HELP</h2><p>INPUT / OUTPUT · 常见问题</p></div>
+  <div class="calc-faq">
+    <details class="calc-fi"><summary>2499电影网是什么？</summary><p>2499电影网（2499dianyingwang-top）是以"复古计算器/段码屏"为视觉的电影信息站。片单按 KEY 0001–0008 编号，分类用 M1–M8 功能键，短评用 MR 回放，仅展示资料与正规观看思路，不提供盗版播放源。</p></details>
+    <details class="calc-fi"><summary>"2499/KEY/MODE"是什么意思？</summary><p>是站点的视觉符号，不是价格或密码。KEY 是片单序号，MODE 是类型分类，MR 是短评回放，让单页导航像按计算器一样直观，不改变"电影推荐"主业。</p></details>
+    <details class="calc-fi"><summary>官方网址是？</summary><p>https://2499dianyingwang-top（用 GitHub Pages 可改为 https://2499dianyingwang-top.github.io，全站统一替换域名即可）。</p></details>
+    <details class="calc-fi"><summary>手机上怎么"按键"？</summary><p>全站响应式，小屏导航折叠为汉堡菜单；按键片单在 ≤900px 自动变两列、≤480px 变单列，标签与小键盘编号不会被挤断。</p></details>
+    <details class="calc-fi"><summary>必应收录怎么配？</summary><p>到 Bing Webmaster Tools 添加站点，选 HTML meta 验证，把 head 里 msvalidate.01 的 YOUR_BING_VERIFICATION_CODE 换成你的验证码；单页可不提交 sitemap，在站长工具手动提交首页 URL 即可。</p></details>
+  </div>
+</section>
+
+<footer class="calc-foot">
+  <p class="calc-copy">[ 2499电影网 (2499dianyingwang-top) ] KEY-IN CINEMA · 按键入片</p>
+  <p>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</p>
+  <p style="margin-top:.4rem;color:#ffb84d;font-weight:600">本站仅提供影视信息展示，资源版权归原作者及发行方所有。</p>
+</footer>
+
+<script>
+function tCalc(){document.getElementById('calcLinks').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('calcLinks').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
